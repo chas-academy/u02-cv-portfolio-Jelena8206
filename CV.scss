@@ -124,6 +124,16 @@ body {
         }
     }
 }
+.tabel tabel, tr, td, th
+{
+   border: 1px solid black;
+   background-color: #e0e0e0;
+}
+.tabel
+{
+    justify-content:center;
+    display:flex;
+}
 
 @media (max-width: 600px) {
     .social-links {
