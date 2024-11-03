@@ -1,0 +1,134 @@
+$font-stack: Helvetica, sans-serif;
+$startColor: #bc6c25;
+$endColor: #d4a373;
+$font-color: #9b2226;
+
+body {
+    font: 100% $font-stack;
+    background: linear-gradient(to right, $startColor, $endColor);
+    
+    h2 {
+        color: $font-color;
+    }
+}
+
+.header {
+    width: 100%;
+    background-color: $startColor;
+
+    .navbar {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            display: inline;
+            margin: 0 15px;
+
+            a {
+                color: #fff;
+                text-decoration: none;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: #ffb703;
+                }
+            }
+        }
+    }
+}
+
+.left-image {
+    position: relative;
+
+    img { 
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: 337px;
+        max-height: 383px;
+    }
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px; 
+    padding: 20px;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr; // En kolumn på mindre skärmar
+    }
+}
+
+.column {
+    background-color: #faedcd; 
+    padding: 15px;
+    border-radius: 5px;
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            margin: 5px 0;
+        }
+    }
+}
+
+.video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.footer {
+    background-color: $endColor; // Använd färgvariabel
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+
+    .navbar {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            display: inline;
+            margin: 0 15px;
+
+            a {
+                color: #fff;
+                text-decoration: none;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: #ca6702;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .social-links {
+        li {
+            margin: 0 10px; // Minska avståndet på små skärmar
+        }
+    }
+}
